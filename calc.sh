@@ -17,6 +17,12 @@ echo "Welcome to my Calculation"
 res=0
 process="y"
 
+#Getting the user Choice of Numbers before the operation
+echo "Please provide the first Number: "
+read a
+
+echo "Please provide the second Number: "
+read b
 # Getting the Menu option for operation.
 while [$process = "y"]
 do
