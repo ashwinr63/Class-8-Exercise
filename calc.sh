@@ -16,11 +16,6 @@ echo "Welcome to my Calculation"
 #Initial value is set to 0 and state of the program is set to y=yes
 res=0
 process="y"
-#Getting the user Choice of Numbers before the operation
-echo "Please provide the first Number: "
-read a
-echo "Please provide the second Number: "
-read b
 # Getting the Menu option for operation.
 while [ $process = "y" ]
 do
@@ -31,6 +26,11 @@ echo "4.Divide"
 echo "Enter Choice below: "
 read choice
 #bc is the standard Math library for a calculator program.
+#Getting the user Choice of Numbers before the operation
+echo "Please provide the first Number: "
+read a
+echo "Please provide the second Number: "
+read b
 case $choice in
 1)res=$(echo "$a + $b" | bc -l)
 echo "Result: " $res;;
