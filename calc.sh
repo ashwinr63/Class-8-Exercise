@@ -10,4 +10,10 @@
 # If the selection does not match a support operation, display an error message.
 # When the operation is complete, redisplay the menu.
 
+#Display the calculation
 echo "Welcome to my Calculation"
+
+#Initial value is set to 0 and state of the program is set to y=yes
+res=0
+process="y"
+
