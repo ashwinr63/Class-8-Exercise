@@ -16,39 +16,36 @@ echo "Welcome to my Calculation"
 #Initial value is set to 0 and state of the program is set to y=yes
 res=0
 process="y"
-
 #Getting the user Choice of Numbers before the operation
 echo "Please provide the first Number: "
 read a
-
 echo "Please provide the second Number: "
 read b
 # Getting the Menu option for operation.
-while [$process = "y"]
+while [ $process = "y" ]
 do
 echo "1.Add"
 echo "2.Subtract"
 echo "3.Multiply"
 echo "4.Divide"
+echo "Enter Choice below: "
 read choice
+#bc is the standard Math library for a calculator program.
 case $choice in
-1)res=$(echo "$a + $b" | bc - 1)
-echo "After Addition =" $res
-;;
-2)res=$(echo "$a - $b" | bc - 1)
-echo "By Subtracting =" $res
-;;
-3)res=$(echo "$a * $b" | bc - 1)
-echo "Product is =" $res
-;;
-4)res=$(echo "$a / $b" | bc - 1)
-echo "Division value is =" $res
-;;
+1)res=$(echo "$a + $b" | bc -l)
+echo "Result: " $res;;
+2)res=$(echo "$a - $b" | bc -l)
+echo "Result: " $res;;
+3)res=$(echo "$a * $b" | bc -l)
+echo "Result: " $res;;
+4)res=$(echo "$a / $b" | bc -l)
+echo "Result: " $res;;
 *) echo "Your Choice is Invalid"
 esac
-echo "Please press y if you want to Continue"
+#Do you want to continue message
+echo "Do you want to continue"
 read process
-if [$process !="y"]
+if [ $process != "y" ]
 then
 exit
 fi
